@@ -17,5 +17,10 @@ export const defaultTheme = {
   'red-500': '#AB222E',
   'red-700': '#7A1921',
 
+  'pink-300': '#f4b8da',
+  'pink-400': '#eea1cd',
+  'pink-700': '#e68bbe',
+  'pink-800': '#f161bf',
+
   'yellow-500': '#FBA94C',
 };
