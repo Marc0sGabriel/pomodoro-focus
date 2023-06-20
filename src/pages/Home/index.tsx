@@ -1,11 +1,16 @@
 import { Play } from '@phosphor-icons/react';
-import { CountDownContainer, FormContainer, HomeContainer } from './styles';
+import {
+  CountDownContainer,
+  FormContainer,
+  HomeContainer,
+  Separator,
+} from './styles';
 
 export function Home() {
   return (
     <HomeContainer>
-      <FormContainer action="">
-        <div>
+      <form action="">
+        <FormContainer>
           <label htmlFor="">Vou focar em</label>
           <input id="task" />
 
@@ -13,12 +18,12 @@ export function Home() {
           <input type="number" id="minutesAmount" />
 
           <span>minutos.</span>
-        </div>
+        </FormContainer>
 
         <CountDownContainer>
           <span>0</span>
           <span>0</span>
-          <span>:</span>
+          <Separator>:</Separator>
           <span>0</span>
           <span>0</span>
         </CountDownContainer>
@@ -27,7 +32,7 @@ export function Home() {
           <Play size={24} />
           Começar
         </button>
-      </FormContainer>
+      </form>
     </HomeContainer>
   );
 }
