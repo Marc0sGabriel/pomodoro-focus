@@ -4,6 +4,7 @@ import {
   FormContainer,
   HomeContainer,
   Separator,
+  StartCountDownButton,
 } from './styles';
 
 export function Home() {
@@ -28,10 +29,10 @@ export function Home() {
           <span>0</span>
         </CountDownContainer>
 
-        <button type="submit">
-          <Play size={24} />
+        <StartCountDownButton type="submit">
+          <Play size={24} weight="bold" />
           Começar
-        </button>
+        </StartCountDownButton>
       </form>
     </HomeContainer>
   );

@@ -7,6 +7,7 @@ export const LayoutContainer = styled.div`
   padding: 2.5rem;
   border-radius: 8px;
   background-color: ${(props) => props.theme['gray-800']};
+  backdrop-filter: blur(8px);
 
   display: flex;
   flex-direction: column;

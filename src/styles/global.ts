@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    background: url('./assets/landscape.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: ${(props) => props.theme['gray-900']};
     color: ${(props) => props.theme['gray-200']};
     padding: 0 1rem;
