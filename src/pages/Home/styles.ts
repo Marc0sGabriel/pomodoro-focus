@@ -76,7 +76,7 @@ export const CountDownContainer = styled.div`
 
 export const Separator = styled.div`
   padding: 2rem 0;
-  color: ${(props) => props.theme['green-300']};
+  color: ${(props) => props.theme['dracula-purple']};
 
   width: 4rem;
   overflow: hidden;
@@ -98,7 +98,7 @@ export const StartCountDownButton = styled.button`
   font-weight: bold;
   cursor: pointer;
 
-  background: ${(props) => props.theme['pink-800']};
+  background: ${(props) => props.theme['dracula-pink']};
   color: ${(props) => props.theme['gray-100']};
 
   transition: all 0.3s;
