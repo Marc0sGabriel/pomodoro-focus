@@ -23,4 +23,10 @@ export const defaultTheme = {
   'pink-800': '#F266AB',
 
   'yellow-500': '#FBA94C',
+
+  'dracula-pink': '#ff79c6',
+  'dracula-green': '#50fa7b',
+  'dracula-purple': '#bd93f9',
+  'dracula-yellow': '#f1fa8c',
+  'dracula-orange': '#ffb86c',
 };
