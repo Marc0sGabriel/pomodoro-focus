@@ -28,6 +28,10 @@ export const FormContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+export const TaskInput = styled.input``;
+
+export const MinutesAmountInput = styled.input``;
+
 export const CountDownContainer = styled.div`
   font-family: 'Roboto Mono', monospace;
   font-size: 10rem;
@@ -73,7 +77,12 @@ export const StartCountDownButton = styled.button`
 
   transition: all 0.3s;
 
-  &:hover {
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &:not(:disabled):hover {
     filter: brightness(0.9);
   }
 `;
