@@ -32,9 +32,10 @@ export function Home() {
             type="number"
             id="minutesAmount"
             placeholder="00"
-            step={1}
-            min={1}
+            step={5}
+            min={5}
             max={60}
+            maxLength={2}
           />
 
           <span>minutos.</span>
