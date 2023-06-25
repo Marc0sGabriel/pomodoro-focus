@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: url('./assets/landscape.jpg');
+    background: url('./assets/landscape02.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
