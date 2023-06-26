@@ -102,7 +102,7 @@ export const StartCountDownButton = styled.button`
   font-weight: bold;
   cursor: pointer;
 
-  background: ${(props) => props.theme['dracula-pink']};
+  background: ${(props) => props.theme['dracula-purple']};
   color: ${(props) => props.theme['gray-100']};
 
   transition: all 0.3s;
