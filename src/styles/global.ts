@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 3px;
   }
 
+  ::selection {
+    background-color: ${(props) => props.theme['dracula-orange']};
+  }
+
   body {
     background: url('./assets/landscape02.jpg');
     background-repeat: no-repeat;
