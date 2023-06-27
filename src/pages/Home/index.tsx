@@ -108,6 +108,7 @@ export function Home() {
             list="task-suggestions"
             placeholder="Digite aqui sua tarefa"
             {...register('task')}
+            disabled={!!activeCycle}
           />
 
           <datalist id="task-suggestions">
@@ -126,6 +127,7 @@ export function Home() {
             max={60}
             maxLength={2}
             {...register('minutesAmount', { valueAsNumber: true })}
+            disabled={!!activeCycle}
           />
 
           <span>minutos.</span>

@@ -38,6 +38,11 @@ const BaseInput = styled.input`
   padding: 0 0.5rem;
   color: ${(props) => props.theme['gray-100']};
 
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
   &:focus {
     box-shadow: none;
     border-color: ${(props) => props.theme['pink-700']};
