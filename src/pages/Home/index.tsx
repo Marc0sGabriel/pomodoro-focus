@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import * as zod from 'zod';
 import { HandPalm, Play } from '@phosphor-icons/react';
 import { NewCycleForm } from './components/NewCycleForm';
@@ -39,9 +39,14 @@ export function Home() {
   const task = watch('task');
   const isSubmitDisabled = !task;
 
+  function handleCreateNewCycle(data: NewCycleFormData) {
+    createNewCycle(data);
+    reset();
+  }
+
   return (
     <HomeContainer>
-      <form onSubmit={handleSubmit(createNewCycle)}>
+      <form onSubmit={handleSubmit(handleCreateNewCycle)}>
         <FormProvider {...newCycleForm}>
           <NewCycleForm />
         </FormProvider>
