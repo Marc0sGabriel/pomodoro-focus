@@ -35,10 +35,9 @@ interface CyclesContextProviderProps {
 
 export const CyclesContext = createContext({} as CyclesContextType);
 
-const initialState = [];
+const stored = sessionStorage.getItem('@pomodoro-focus');
 
-const initializer = (initialValue = initialState) =>
-  JSON.parse(sessionStorage.getItem('@pomodoro-focus')!) || initialValue;
+const initializer = (initialValue) => JSON.parse(stored) || initialValue;
 
 export function CyclesContextProvider({
   children,
