@@ -33,13 +33,9 @@ interface CyclesContextProviderProps {
   children: ReactNode;
 }
 
-interface InitialStateProps {
-  initialState?: () => void;
-}
-
 export const CyclesContext = createContext({} as CyclesContextType);
 
-const initialState: InitialStateProps = [];
+const initialState = [];
 
 const initializer = (initialValue = initialState) =>
   JSON.parse(sessionStorage.getItem('@pomodoro-focus')!) || initialValue;
