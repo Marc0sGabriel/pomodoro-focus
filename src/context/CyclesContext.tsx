@@ -33,28 +33,15 @@ interface CyclesContextProviderProps {
   children: ReactNode;
 }
 
-interface InitialStateProps {
-  initialState?: () => void;
-}
-
 export const CyclesContext = createContext({} as CyclesContextType);
-
-const initialState: InitialStateProps = [];
-
-const initializer = (initialValue = initialState) =>
-  JSON.parse(localStorage.getItem('@pomodoro-focus')!) || initialValue;
 
 export function CyclesContextProvider({
   children,
 }: CyclesContextProviderProps) {
-  const [cyclesState, dispatch] = useReducer(
-    cyclesReducer,
-    {
-      cycles: [],
-      activeCycleId: null,
-    },
-    initializer
-  );
+  const [cyclesState, dispatch] = useReducer(cyclesReducer, {
+    cycles: [],
+    activeCycleId: null,
+  });
 
   const { cycles, activeCycleId } = cyclesState;
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId);
