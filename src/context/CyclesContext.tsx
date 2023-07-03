@@ -33,12 +33,16 @@ interface CyclesContextProviderProps {
   children: ReactNode;
 }
 
+interface InitialStateProps {
+  initialState?: () => void;
+}
+
 export const CyclesContext = createContext({} as CyclesContextType);
 
-const initialState = [];
+const initialState: InitialStateProps = [];
 
 const initializer = (initialValue = initialState) =>
-  JSON.parse(sessionStorage.getItem('@pomodoro-focus')!) || initialValue;
+  JSON.parse(localStorage.getItem('@pomodoro-focus')!) || initialValue;
 
 export function CyclesContextProvider({
   children,
@@ -64,7 +68,7 @@ export function CyclesContextProvider({
   });
 
   useEffect(() => {
-    sessionStorage.setItem('@pomodoro-focus', JSON.stringify(cyclesState));
+    localStorage.setItem('@pomodoro-focus', JSON.stringify(cyclesState));
   }, [cyclesState]);
 
   function setSecondsPassed(seconds: number) {
