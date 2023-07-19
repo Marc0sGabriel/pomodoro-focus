@@ -24,9 +24,9 @@ export function Countdown() {
 
   useEffect(() => {
     if (activeCycle) {
-      document.title = `${minutes}:${seconds}`;
+      document.title = `${minutes}:${seconds} Timer Active`;
     } else {
-      document.title = 'Pomodoro Focus';
+      document.title = 'Space Focus';
     }
   }, [minutes, seconds, activeCycle]);
 
