@@ -14,7 +14,9 @@ export function Header() {
           <Calendar size={32} />
         </NavLink>
 
-        <Gear size={32} />
+        <NavLink to="/settings" title="Configurações">
+          <Gear size={32} />
+        </NavLink>
       </nav>
     </HeaderContainer>
   );
