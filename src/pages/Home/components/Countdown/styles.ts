@@ -15,6 +15,26 @@ export const CountDownContainer = styled.div`
     border-radius: 8px;
     border: 1px solid ${(props) => props.theme['gray-600']};
   }
+
+  @media (max-width: 600px) {
+    font-size: 5rem;
+    gap: 0.4rem;
+    line-height: 4rem;
+
+    span {
+      font-size: 7rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    font-size: 3rem;
+    gap: 0.4rem;
+    line-height: 1rem;
+
+    span {
+      font-size: 4rem;
+    }
+  }
 `;
 
 export const Separator = styled.div`
@@ -25,4 +45,8 @@ export const Separator = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 500px) {
+    width: 2rem;
+  }
 `;

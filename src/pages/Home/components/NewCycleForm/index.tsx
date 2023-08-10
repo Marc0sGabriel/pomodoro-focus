@@ -24,20 +24,22 @@ export function NewCycleForm() {
         <option value="Organizar agenda da semana" />
       </datalist>
 
-      <label htmlFor="minutes">durante</label>
-      <MinutesAmountInput
-        type="number"
-        id="minutesAmount"
-        placeholder="00"
-        step={5}
-        min={5}
-        max={60}
-        maxLength={2}
-        {...register('minutesAmount', { valueAsNumber: true })}
-        disabled={!!activeCycle}
-      />
+      <div>
+        <label htmlFor="minutes">durante</label>
+        <MinutesAmountInput
+          type="number"
+          id="minutesAmount"
+          placeholder="00"
+          step={5}
+          min={5}
+          max={60}
+          maxLength={2}
+          {...register('minutesAmount', { valueAsNumber: true })}
+          disabled={!!activeCycle}
+        />
 
-      <span>minutos.</span>
+        <span>minutos.</span>
+      </div>
     </FormContainer>
   );
 }

@@ -11,6 +11,14 @@ export const HistoryContainer = styled.main`
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
   }
+
+  @media (max-width: 821px) {
+    padding: 1rem 0 0 0;
+  }
+
+  @media (max-width: 500px) {
+    padding: 1rem 0 0 0;
+  }
 `;
 
 export const HistoryList = styled.div`

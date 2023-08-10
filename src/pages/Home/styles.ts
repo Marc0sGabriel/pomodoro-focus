@@ -14,6 +14,23 @@ export const HomeContainer = styled.main`
     align-items: center;
     gap: 3.5rem;
   }
+
+  @media (max-width: 700px) {
+    html {
+      font-size: 70%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    height: 100%;
+
+    form {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
 `;
 
 const BaseButton = styled.button`
