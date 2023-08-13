@@ -60,11 +60,11 @@ const BaseButton = styled.button`
 `;
 
 export const StartCountDownButton = styled(BaseButton)`
-  background: ${(props) => props.theme['dracula-purple']};
+  background: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme['gray-100']};
 `;
 
 export const StopCountDownButton = styled(BaseButton)`
-  background: ${(props) => props.theme['dracula-red']};
-  color: ${(props) => props.theme['gray-100']};
+  background: ${(props) => props.theme.colors.red};
+  color: ${(props) => props.theme.colors.gray['gray-100']};
 `;
