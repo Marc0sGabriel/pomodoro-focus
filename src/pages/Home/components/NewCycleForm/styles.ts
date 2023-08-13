@@ -44,7 +44,7 @@ const BaseInput = styled.input`
 
   &:focus {
     box-shadow: none;
-    border-color: ${(props) => props.theme['pink-700']};
+    border-color: ${(props) => props.theme.colors.secondary};
     transition: all 0.3s;
   }
 
