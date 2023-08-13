@@ -1,7 +1,7 @@
 import 'styled-components';
-import { defaultTheme } from '../styles/themes/default';
+import { draculaTheme } from '../styles/themes/default';
 
-type ThemeType = typeof defaultTheme;
+type ThemeType = typeof draculaTheme;
 
 declare module 'styled-components' {
   interface DefaultTheme extends ThemeType {}
