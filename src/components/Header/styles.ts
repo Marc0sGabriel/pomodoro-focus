@@ -32,12 +32,12 @@ export const HeaderContainer = styled.header`
       transition: all 0.3s;
 
       &:hover {
-        border-bottom: 3px solid ${(props) => props.theme['dracula-pink']};
+        border-bottom: 3px solid ${(props) => props.theme.colors.secondary};
       }
 
       &.active {
-        color: ${(props) => props.theme['dracula-pink']};
-        border-bottom: 3px solid ${(props) => props.theme['dracula-pink']};
+        color: ${(props) => props.theme.colors.secondary};
+        border-bottom: 3px solid ${(props) => props.theme.colors.secondary};
       }
     }
   }
