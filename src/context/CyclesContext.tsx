@@ -12,6 +12,7 @@ import {
   markCurrentCycleAsFinishedAction,
 } from '../reducers/cycles/action';
 import { differenceInSeconds } from 'date-fns';
+import { DefaultTheme } from 'styled-components';
 
 interface CreateCycleData {
   task: string;
@@ -27,16 +28,19 @@ interface CyclesContextType {
   setSecondsPassed: (seconds: number) => void;
   createNewCycle: (data: CreateCycleData) => void;
   interruptCurrentCycle: () => void;
+  handleThemeChange: (theme: DefaultTheme) => void;
 }
 
 interface CyclesContextProviderProps {
   children: ReactNode;
+  handleThemeChange: (theme: DefaultTheme) => void;
 }
 
 export const CyclesContext = createContext({} as CyclesContextType);
 
 export function CyclesContextProvider({
   children,
+  handleThemeChange,
 }: CyclesContextProviderProps) {
   const [cyclesState, dispatch] = useReducer(
     cyclesReducer,
@@ -111,6 +115,7 @@ export function CyclesContextProvider({
         setSecondsPassed,
         createNewCycle,
         interruptCurrentCycle,
+        handleThemeChange,
       }}
     >
       {children}
