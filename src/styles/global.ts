@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<{ $wallpaper: string }>`
   * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: url('./assets/landscape02.jpg');
+    background: url(./assets/${(props) => props.$wallpaper});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
