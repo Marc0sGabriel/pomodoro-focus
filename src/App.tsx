@@ -8,6 +8,11 @@ import { useState } from 'react';
 
 export function App() {
   const [customTheme, setCustomTheme] = useState(draculaTheme);
+  const [wallpaper, setWallpaper] = useState('landscape02.jpg');
+
+  const handleWallpaper = (name: string) => {
+    return setWallpaper(name);
+  };
 
   const handleThemeChange = (theme: DefaultTheme) => {
     setCustomTheme(theme);
@@ -15,13 +20,15 @@ export function App() {
 
   return (
     <ThemeProvider theme={customTheme}>
-      <CyclesContextProvider handleThemeChange={handleThemeChange}>
+      <CyclesContextProvider
+        handleThemeChange={handleThemeChange}
+        handleWallpaper={handleWallpaper}
+      >
         <BrowserRouter>
           <Router />
         </BrowserRouter>
+        <GlobalStyle $wallpaper={wallpaper} />
       </CyclesContextProvider>
-
-      <GlobalStyle />
     </ThemeProvider>
   );
 }
