@@ -21,7 +21,7 @@ export function NewCycleForm() {
       <datalist id="task-suggestions">
         <option value="Estudar para o Enem" />
         <option value="Meditar" />
-        <option value="Organizar agenda da semana" />
+        <option value="Organizar agenda" />
       </datalist>
 
       <div>
