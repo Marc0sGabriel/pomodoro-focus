@@ -5,14 +5,36 @@ export const WallpaperContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
 
-  img {
-    max-height: 15rem;
-    max-width: 15rem;
-    object-fit: cover;
-
+  button {
+    height: 200px;
+    width: 20rem;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    outline: none;
     border-radius: 8px;
+    cursor: pointer;
+    transition: all;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover !important;
+    }
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 8px;
+    height: 200px;
+    width: 20rem;
   }
 `;
 
