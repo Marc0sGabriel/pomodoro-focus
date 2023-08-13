@@ -9,12 +9,12 @@ export const GlobalStyle = createGlobalStyle`
 
   :focus {
     outline: 0;
-    box-shadow: 0 0 0 2px ${(props) => props.theme['dracula-cyan']};
+    box-shadow: 0 0 0 2px ${(props) => props.theme.colors.highlight};
     border-radius: 3px;
   }
 
   ::selection {
-    background-color: ${(props) => props.theme['dracula-orange']};
+    background-color: ${(props) => props.theme.colors.selection};
   }
 
   body {
