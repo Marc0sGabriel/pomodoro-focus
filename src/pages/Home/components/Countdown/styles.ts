@@ -4,16 +4,16 @@ export const CountDownContainer = styled.div`
   font-family: 'Roboto Mono', monospace;
   font-size: 10rem;
   line-height: 8rem;
-  color: ${(props) => props.theme['gray-100']};
+  color: ${(props) => props.theme.colors.gray['gray-100']};
 
   display: flex;
   gap: 1rem;
 
   span {
-    background-color: ${(props) => props.theme['gray-700']};
+    background-color: ${(props) => props.theme.colors.gray['gray-700']};
     padding: 2rem 1rem;
     border-radius: 8px;
-    border: 1px solid ${(props) => props.theme['gray-600']};
+    border: 1px solid ${(props) => props.theme.colors.gray['gray-600']};
   }
 
   @media (max-width: 600px) {
@@ -39,7 +39,7 @@ export const CountDownContainer = styled.div`
 
 export const Separator = styled.div`
   padding: 2rem 0;
-  color: ${(props) => props.theme['dracula-purple']};
+  color: ${(props) => props.theme.colors.primary};
 
   width: 4rem;
   overflow: hidden;
