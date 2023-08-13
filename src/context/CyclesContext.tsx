@@ -29,11 +29,13 @@ interface CyclesContextType {
   createNewCycle: (data: CreateCycleData) => void;
   interruptCurrentCycle: () => void;
   handleThemeChange: (theme: DefaultTheme) => void;
+  handleWallpaper: (name: string) => void;
 }
 
 interface CyclesContextProviderProps {
   children: ReactNode;
   handleThemeChange: (theme: DefaultTheme) => void;
+  handleWallpaper: (name: string) => void;
 }
 
 export const CyclesContext = createContext({} as CyclesContextType);
@@ -41,6 +43,7 @@ export const CyclesContext = createContext({} as CyclesContextType);
 export function CyclesContextProvider({
   children,
   handleThemeChange,
+  handleWallpaper,
 }: CyclesContextProviderProps) {
   const [cyclesState, dispatch] = useReducer(
     cyclesReducer,
@@ -116,6 +119,7 @@ export function CyclesContextProvider({
         createNewCycle,
         interruptCurrentCycle,
         handleThemeChange,
+        handleWallpaper,
       }}
     >
       {children}
