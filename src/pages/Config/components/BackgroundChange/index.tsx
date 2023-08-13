@@ -2,8 +2,12 @@ import { ImageSquare, X } from '@phosphor-icons/react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { ButtonCard } from '../../styles';
 import { DialogContentStyles, Overlay, WallpaperContainer } from './styles';
+import { useContext } from 'react';
+import { CyclesContext } from '../../../../context/CyclesContext';
 
 export function ButtonSetBackground() {
+  const { handleWallpaper } = useContext(CyclesContext);
+
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -26,35 +30,29 @@ export function ButtonSetBackground() {
           </header>
 
           <WallpaperContainer>
-            <img
-              src="https://w.wallhaven.cc/full/43/wallhaven-43x5o6.jpg"
-              alt="wallpaper 01"
-            />
+            <button onClick={() => handleWallpaper('cozy.jpg')}>
+              <img src="./assets/cozy.jpg" alt="cozy" />
+            </button>
 
-            <img
-              src="https://w.wallhaven.cc/full/43/wallhaven-43x5o6.jpg"
-              alt="wallpaper 01"
-            />
+            <button onClick={() => handleWallpaper('anime01.jpg')}>
+              <img src="./assets/anime01.jpg" alt="anime" />
+            </button>
 
-            <img
-              src="https://w.wallhaven.cc/full/43/wallhaven-43x5o6.jpg"
-              alt="wallpaper 01"
-            />
+            <button onClick={() => handleWallpaper('animeGirls.png')}>
+              <img src="./assets/animeGirls.png" alt="sakura wallpaper" />
+            </button>
 
-            <img
-              src="https://w.wallhaven.cc/full/43/wallhaven-43x5o6.jpg"
-              alt="wallpaper 01"
-            />
+            <button onClick={() => handleWallpaper('landscape02.jpg')}>
+              <img src="./assets/landscape02.jpg" alt="landscape 02" />
+            </button>
 
-            <img
-              src="https://w.wallhaven.cc/full/43/wallhaven-43x5o6.jpg"
-              alt="wallpaper 01"
-            />
+            <button onClick={() => handleWallpaper('landscape03.jpg')}>
+              <img src="./assets/landscape03.jpg" alt="landscape 01" />
+            </button>
 
-            <img
-              src="https://w.wallhaven.cc/full/43/wallhaven-43x5o6.jpg"
-              alt="wallpaper 01"
-            />
+            <button onClick={() => handleWallpaper('landscape.jpg')}>
+              <img src="./assets/landscape.jpg" alt="landscape" />
+            </button>
           </WallpaperContainer>
         </DialogContentStyles>
       </Dialog.Portal>
