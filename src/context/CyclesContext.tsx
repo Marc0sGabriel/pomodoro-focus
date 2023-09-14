@@ -52,7 +52,7 @@ export function CyclesContextProvider({
       activeCycleId: null,
     },
     (initialState) => {
-      const storedStateAsJSON = sessionStorage.getItem(
+      const storedStateAsJSON = localStorage.getItem(
         '@pomodoro-focus:task-state-1.0.0'
       );
 
@@ -77,7 +77,7 @@ export function CyclesContextProvider({
 
   useEffect(() => {
     const stateJSON = JSON.stringify(cyclesState);
-    sessionStorage.setItem('@pomodoro-focus:task-state-1.0.0', stateJSON);
+    localStorage.setItem('@pomodoro-focus:task-state-1.0.0', stateJSON);
   }, [cyclesState]);
 
   function setSecondsPassed(seconds: number) {

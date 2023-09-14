@@ -1,4 +1,10 @@
-import { Calendar, Gear, Timer } from '@phosphor-icons/react';
+import {
+  Calendar,
+  Gear,
+  ListBullets,
+  MusicNotes,
+  Timer,
+} from '@phosphor-icons/react';
 import { HeaderContainer } from './styles';
 import { NavLink } from 'react-router-dom';
 
@@ -12,6 +18,14 @@ export function Header() {
         </NavLink>
         <NavLink to="/history" title="Histórico">
           <Calendar size={32} />
+        </NavLink>
+
+        <NavLink to={'/music'} title="Music">
+          <MusicNotes size={32} />
+        </NavLink>
+
+        <NavLink to={'/todo-list'} title="Lista de tarefas">
+          <ListBullets size={32} />
         </NavLink>
 
         <NavLink to="/settings" title="Configurações">
