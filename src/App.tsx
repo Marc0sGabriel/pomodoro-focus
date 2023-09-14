@@ -4,11 +4,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { Router } from './Router';
 import { CyclesContextProvider } from './context/CyclesContext';
 import { draculaTheme } from './styles/themes/default';
-import { useState } from 'react';
+import { usePersistedState } from './utils/usePersistedState';
 
 export function App() {
-  const [customTheme, setCustomTheme] = useState(draculaTheme);
-  const [wallpaper, setWallpaper] = useState('landscape02.jpg');
+  const [customTheme, setCustomTheme] = usePersistedState('@pomodoro-theme', draculaTheme);
+  const [wallpaper, setWallpaper] = usePersistedState('@pomodoro-wallpaper', 'landscape02.jpg');
 
   const handleWallpaper = (name: string) => {
     return setWallpaper(name);
