@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import { CountDownContainer, Separator } from './styles';
 import { differenceInSeconds } from 'date-fns';
 import { CyclesContext } from '../../../../context/CyclesContext';
+import { setInterval, clearInterval } from 'worker-timers';
 
 export function Countdown() {
   const {
@@ -26,7 +27,7 @@ export function Countdown() {
     if (activeCycle) {
       document.title = `${minutes}:${seconds} Timer Active`;
     } else {
-      document.title = 'Space Focus';
+      document.title = 'Focus Space';
     }
   }, [minutes, seconds, activeCycle]);
 
