@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { Task } from './components/Task';
 import { ButtonCreateNewTask, ContainerTodoListPage } from './styles';
+import { Plus } from '@phosphor-icons/react';
 
 export interface TasksProps {
   id: string;
@@ -46,7 +47,10 @@ export default function TodoListPage() {
             value={getTaskName}
             onChange={onChangeTaskName}
           />
-          <ButtonCreateNewTask type="submit">Nova tarefa</ButtonCreateNewTask>
+          <ButtonCreateNewTask type="submit">
+            <span>Nova tarefa</span>
+            <Plus size={24} weight="bold" />
+          </ButtonCreateNewTask>
         </form>
       </header>
 
