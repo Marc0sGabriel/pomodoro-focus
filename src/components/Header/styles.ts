@@ -40,5 +40,15 @@ export const HeaderContainer = styled.header`
         border-bottom: 3px solid ${(props) => props.theme.colors.secondary};
       }
     }
+
+    @media (max-width: 485px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 485px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 `;

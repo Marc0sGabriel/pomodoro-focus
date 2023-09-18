@@ -28,6 +28,14 @@ export const ContainerTodoListPage = styled.section`
       }
     }
   }
+
+  @media (max-width: 600px) {
+    padding: 3.5rem 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 3.5rem 0;
+  }
 `;
 
 export const ButtonCreateNewTask = styled.button`
@@ -40,4 +48,33 @@ export const ButtonCreateNewTask = styled.button`
   outline: none;
 
   cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.85);
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 600px) {
+    span {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  @media (max-width: 6000px) {
+    svg {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  @media (max-width: 600px) {
+    svg {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    border-radius: 9999px;
+    padding: 0.8rem;
+  }
 `;
