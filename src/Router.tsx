@@ -5,6 +5,7 @@ import { DefaultLayout } from './layouts/DefaultLayout';
 import { SettingsPage } from './pages/SettingsPage';
 import { MusicPage } from './pages/Music';
 import { NotFoundPage } from './pages/NotFound';
+import TodoListPage from './pages/TodoList';
 
 export function Router() {
   return (
@@ -14,7 +15,7 @@ export function Router() {
         <Route path="/history" element={<History />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/music" element={<MusicPage />} />
-        <Route path="/todo-list" element={<SettingsPage />} />
+        <Route path="/todo-list" element={<TodoListPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
