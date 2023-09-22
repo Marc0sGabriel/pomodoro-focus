@@ -25,7 +25,9 @@ export const GlobalStyle = createGlobalStyle<{ $wallpaper: string }>`
     background-color: ${(props) => props.theme['gray-900']};
     color: ${(props) => props.theme['gray-200']};
     padding: 0 1rem;
-    -webkit-font-smoothing: antialiassed;
+    font-smooth: always;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body, input, textarea, button {
