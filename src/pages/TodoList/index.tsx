@@ -1,7 +1,8 @@
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { Task } from './components/Task';
 import { ButtonCreateNewTask, ContainerTodoListPage } from './styles';
 import { Plus } from '@phosphor-icons/react';
+import { usePersistedState } from '../../utils/usePersistedState';
 
 export interface TasksProps {
   id: string;
@@ -9,13 +10,29 @@ export interface TasksProps {
   isCompleted: boolean;
 }
 
+const LOCAL_STORAGE_TASKS_KEY = '@pomodoro-todolist:savedTasks';
+
 export default function TodoListPage() {
-  const [addTasks, setAddTasks] = useState<TasksProps[]>([]);
+  const [addTasks, setAddTasks] = usePersistedState<TasksProps[]>(
+    LOCAL_STORAGE_TASKS_KEY,
+    []
+  );
   const [getTaskName, setGetTaskname] = useState('');
+
+  useEffect(() => {
+    function loadStoredTasks() {
+      const stored = localStorage.getItem(LOCAL_STORAGE_TASKS_KEY);
+      if (stored) {
+        setAddTasks(JSON.parse(stored));
+      }
+    }
+    loadStoredTasks();
+  }, [setAddTasks]);
 
   function addTask(taskName: string) {
     setAddTasks([
       ...addTasks,
+
       {
         id: crypto.randomUUID(),
         title: taskName,
@@ -33,6 +50,28 @@ export default function TodoListPage() {
 
   function onChangeTaskName(event: ChangeEvent<HTMLInputElement>) {
     setGetTaskname(event.target.value);
+  }
+
+  function toogleCompletedTaskByID(taskID: string) {
+    const newTasks = addTasks.map((task: TasksProps) => {
+      if (task.id === taskID) {
+        return {
+          ...task,
+          isCompleted: !task.isCompleted,
+        };
+      }
+      return task;
+    });
+
+    setAddTasks(newTasks);
+  }
+
+  function deleteTaskByID(taskID: string) {
+    const removeNewTasks = addTasks.filter(
+      (task: TasksProps) => task.id !== taskID
+    );
+
+    setAddTasks(removeNewTasks);
   }
 
   return (
@@ -55,7 +94,14 @@ export default function TodoListPage() {
       </header>
 
       <section>
-        <Task task={addTasks} />
+        {addTasks.map((tasks: TasksProps) => (
+          <Task
+            key={tasks.id}
+            task={tasks}
+            onComplete={toogleCompletedTaskByID}
+            onDelete={deleteTaskByID}
+          />
+        ))}
       </section>
     </ContainerTodoListPage>
   );
