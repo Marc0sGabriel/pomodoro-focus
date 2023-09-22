@@ -9,6 +9,12 @@ export const TaskCardContainer = styled.div`
   margin-top: 0.875rem;
   padding: 1rem;
 
+  .completedTask {
+    text-decoration: line-through;
+    font-weight: normal;
+    color: hsl(0, 0%, 70%);
+  }
+
   div {
     display: flex;
     width: 100%;
@@ -39,16 +45,23 @@ export const TaskCardContainer = styled.div`
 `;
 
 export const TaskInputChecked = styled.button`
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.4rem;
+  height: 1.4rem;
   outline: none;
   border-radius: 9999px;
   border: 2px solid ${(props) => props.theme.colors.primary};
   background: transparent;
 
-  & + .completedTask {
-    text-decoration: line-through;
-    font-weight: normal;
-    color: hsl(0, 0%, 70%);
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    border-radius: 9999px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    fill: ${(props) => props.theme.colors.primary};
   }
 `;
