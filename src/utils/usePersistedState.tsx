@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-export function usePersistedState(key: string, initialState: any) {
+export function usePersistedState<S>(key: string, initialState: any) {
   const [state, setState] = useState(() => {
     const storageValue = localStorage.getItem(key);
 
     if (storageValue) {
       return JSON.parse(storageValue);
     } else {
-      return initialState
+      return initialState;
     }
   });
 
@@ -17,5 +17,4 @@ export function usePersistedState(key: string, initialState: any) {
   }, [state]);
 
   return [state, setState];
-
 }
