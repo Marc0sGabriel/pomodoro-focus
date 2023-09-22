@@ -74,6 +74,9 @@ export default function TodoListPage() {
     setAddTasks(removeNewTasks);
   }
 
+  const isEmptyInput = getTaskName.length === 0;
+  const disabledSubmitButton = isEmptyInput;
+
   return (
     <ContainerTodoListPage>
       <header>
@@ -86,7 +89,7 @@ export default function TodoListPage() {
             value={getTaskName}
             onChange={onChangeTaskName}
           />
-          <ButtonCreateNewTask type="submit">
+          <ButtonCreateNewTask type="submit" disabled={disabledSubmitButton}>
             <span>Nova tarefa</span>
             <Plus size={24} weight="bold" />
           </ButtonCreateNewTask>
