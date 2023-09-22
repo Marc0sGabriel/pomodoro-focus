@@ -51,6 +51,7 @@ export const TaskInputChecked = styled.button`
   border-radius: 9999px;
   border: 2px solid ${(props) => props.theme.colors.primary};
   background: transparent;
+  cursor: pointer;
 
   &:focus {
     outline: 0;
