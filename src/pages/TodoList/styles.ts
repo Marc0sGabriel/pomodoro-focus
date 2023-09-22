@@ -49,9 +49,14 @@ export const ButtonCreateNewTask = styled.button`
 
   cursor: pointer;
 
-  &:hover {
+  &:not(:disabled):hover {
     filter: brightness(0.85);
     transition: all 0.3s ease;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   @media (max-width: 600px) {
