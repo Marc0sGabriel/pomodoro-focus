@@ -1,27 +1,28 @@
 import { TaskCardContainer, TaskInputChecked } from './styles';
-import { Trash } from '@phosphor-icons/react';
+import { CheckCircle, Trash } from '@phosphor-icons/react';
 import { TasksProps } from '../..';
 
 interface TaskProps {
-  task: TasksProps[];
+  task: TasksProps;
+  onComplete: (taskID: string) => void;
+  onDelete: (taskID: string) => void;
 }
 
-export function Task({ task }: TaskProps) {
+export function Task({ task, onComplete, onDelete }: TaskProps) {
   return (
-    <>
-      {task
-        .map((taskData) => (
-          <TaskCardContainer key={taskData.id}>
-            <TaskInputChecked key={taskData.id} />
-            <div>
-              <p className="completedTask">{taskData.title}</p>
-              <button className="btn-delete-task">
-                <Trash size={25} weight="regular" />
-              </button>
-            </div>
-          </TaskCardContainer>
-        ))
-        .reverse()}
-    </>
+    <TaskCardContainer>
+      <TaskInputChecked onClick={() => onComplete(task.id)}>
+        {task.isCompleted ? <CheckCircle size={20} weight="fill" /> : <div />}
+      </TaskInputChecked>
+
+      <div>
+        <p className={`${task.isCompleted ? 'completedTask' : ''}`}>
+          {task.title}
+        </p>
+        <button className="btn-delete-task" onClick={() => onDelete(task.id)}>
+          <Trash size={25} weight="regular" />
+        </button>
+      </div>
+    </TaskCardContainer>
   );
 }
