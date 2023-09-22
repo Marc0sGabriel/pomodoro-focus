@@ -7,4 +7,11 @@ export const ContainerMusicPage = styled.div`
     color: ${(props) => props.theme['gray-100']};
     margin-bottom: 1rem;
   }
+
+  section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10rem 0;
+  }
 `;
