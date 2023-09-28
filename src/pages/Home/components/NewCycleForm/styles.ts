@@ -12,10 +12,20 @@ export const FormContainer = styled.div`
   flex-wrap: wrap;
   line-height: 2rem;
 
+  background: ${(props) => props.theme.colors.background};
+  backdrop-filter: blur(5px);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+
   @media (max-width: 500px) {
-    font-size: 1rem;
+    font-size: 0.6rem;
     display: flex;
     flex-direction: column;
+
+    background: ${(props) => props.theme.colors.background};
+    backdrop-filter: none;
+    border-radius: 8px;
+    max-width: 340px;
 
     label:first-of-type {
       font-size: 1.25rem;
@@ -45,11 +55,17 @@ const BaseInput = styled.input`
   &:focus {
     box-shadow: none;
     border-color: ${(props) => props.theme.colors.secondary};
+    border-radius: 0px !important;
     transition: all 0.3s;
   }
 
   &::placeholder {
     color: ${(props) => props.theme['gray-500']};
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
 
     @media (max-width: 500px) {
       font-size: 1rem;
