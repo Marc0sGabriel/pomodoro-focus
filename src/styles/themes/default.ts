@@ -30,7 +30,7 @@ export const draculaTheme = {
   'gray-500': '#7C7C8A',
   'gray-600': '#323238',
   'gray-700': '#29292E',
-  'gray-800': 'rgba(32,32,36, 0.8)',
+  'gray-800': 'rgba(32,32,36, 0.6)',
   'gray-900': '#121214',
   'dracula-red': '#ff5555',
   'dracula-green': '#50fa7b',
