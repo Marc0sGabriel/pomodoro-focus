@@ -4,8 +4,8 @@ import { ButtonSetBackground } from './components/BackgroundChange';
 import * as Popover from '@radix-ui/react-popover';
 import { CaretDown, Palette } from '@phosphor-icons/react';
 
-import onedark from '../../styles/themes/onedark';
 import { draculaTheme } from '../../styles/themes/default';
+import rosepine from '../../styles/themes/rosepine';
 import palenight from '../../styles/themes/palenight';
 import synthwave from '../../styles/themes/synthwave';
 import {
@@ -55,14 +55,14 @@ export function SettingsPage() {
 
                 <button
                   onClick={() => {
-                    handleThemeChange(onedark);
+                    handleThemeChange(rosepine);
                   }}
                 >
                   <img
-                    src="https://zhuangtongfa.gallerycdn.vsassets.io/extensions/zhuangtongfa/material-theme/3.16.0/1689910517425/Microsoft.VisualStudio.Services.Icons.Default"
-                    alt="Logomarca do tema one dark pro"
+                    src="https://rosepinetheme.com/assets/logo-main.png"
+                    alt="Tema de cores rosé pine"
                   />
-                  <span>One Dark Pro</span>
+                  <span>Rosé Pine</span>
                 </button>
 
                 <button
