@@ -1,17 +1,17 @@
 export default {
-  title: 'onedark',
+  title: 'rose-pine',
   white: '#ffff',
 
   colors: {
-    primary: '#e06c75',
-    secondary: '#e5c07b',
-    background: '#282c34',
-    foreground: '#7f848e',
-    highlight: '#56b6c2',
+    primary: '#3e8fb0',
+    secondary: '#ebbcba',
+    background: '#191724',
+    foreground: '#26233a',
+    highlight: '#c4a7e7',
     selection: '#ffb86c',
-    green: '#98c379',
-    red: '#f44747',
-    yellow: '#e5c07b',
+    green: '#9ccfd8',
+    red: '#eb6f92',
+    yellow: '#f6c177',
 
     gray: {
       'gray-100': '#E1E1E6',
@@ -37,3 +37,5 @@ export default {
   'dracula-green': '#98c379',
   'dracula-yellow': '#e5c07b',
 };
+
+//31748f
