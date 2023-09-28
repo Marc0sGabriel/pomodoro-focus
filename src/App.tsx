@@ -7,8 +7,14 @@ import { draculaTheme } from './styles/themes/default';
 import { usePersistedState } from './utils/usePersistedState';
 
 export function App() {
-  const [customTheme, setCustomTheme] = usePersistedState('@pomodoro-theme', draculaTheme);
-  const [wallpaper, setWallpaper] = usePersistedState('@pomodoro-wallpaper', 'landscape02.jpg');
+  const [customTheme, setCustomTheme] = usePersistedState(
+    '@pomodoro-theme',
+    draculaTheme
+  );
+  const [wallpaper, setWallpaper] = usePersistedState(
+    '@pomodoro-wallpaper',
+    'laundry.png'
+  );
 
   const handleWallpaper = (name: string) => {
     return setWallpaper(name);
