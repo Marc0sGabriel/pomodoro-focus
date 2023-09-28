@@ -8,8 +8,6 @@ import { CyclesContext } from '../../../../context/CyclesContext';
 export function ButtonSetBackground() {
   const { handleWallpaper } = useContext(CyclesContext);
 
-
-
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -32,28 +30,44 @@ export function ButtonSetBackground() {
           </header>
 
           <WallpaperContainer>
-            <button onClick={() => handleWallpaper('cozy.jpg')}>
-              <img loading='lazy' src="./assets/cozy.jpg" alt="cozy" />
+            <button onClick={() => handleWallpaper('busStation.jpg')}>
+              <img
+                loading="lazy"
+                src="./assets/busStation.jpg"
+                alt="bus station"
+              />
             </button>
 
             <button onClick={() => handleWallpaper('anime01.jpg')}>
-              <img loading='lazy' src="./assets/anime01.jpg" alt="anime" />
+              <img loading="lazy" src="./assets/anime01.jpg" alt="anime" />
             </button>
 
             <button onClick={() => handleWallpaper('animeGirls.png')}>
-              <img loading='lazy' src="./assets/animeGirls.png" alt="sakura wallpaper" />
+              <img
+                loading="lazy"
+                src="./assets/animeGirls.png"
+                alt="Anime girls"
+              />
             </button>
 
             <button onClick={() => handleWallpaper('landscape02.jpg')}>
-              <img loading='lazy' src="./assets/landscape02.jpg" alt="landscape 02" />
+              <img
+                loading="lazy"
+                src="./assets/landscape02.jpg"
+                alt="landscape 02"
+              />
+            </button>
+
+            <button onClick={() => handleWallpaper('laundry.png')}>
+              <img loading="lazy" src="./assets/laundry.png" alt="laundry" />
             </button>
 
             <button onClick={() => handleWallpaper('landscape03.jpg')}>
-              <img loading='lazy' src="./assets/landscape03.jpg" alt="landscape 01" />
-            </button>
-
-            <button onClick={() => handleWallpaper('landscape.jpg')}>
-              <img loading='lazy' src="./assets/landscape.jpg" alt="landscape" />
+              <img
+                loading="lazy"
+                src="./assets/landscape03.jpg"
+                alt="grass field"
+              />
             </button>
           </WallpaperContainer>
         </DialogContentStyles>
