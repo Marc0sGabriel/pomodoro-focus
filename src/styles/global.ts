@@ -35,4 +35,11 @@ export const GlobalStyle = createGlobalStyle<{ $wallpaper: string }>`
     font-weight: 400;
     font-size: 1rem;
   }
+
+  @media (min-width: 500px) {
+   body {
+    height: 100vh;
+    overflow: hidden;
+   }
+  }
 `;
