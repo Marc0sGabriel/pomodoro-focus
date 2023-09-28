@@ -1,3 +1,5 @@
+import { HeaderContainer } from './styles';
+import { NavLink } from 'react-router-dom';
 import {
   Calendar,
   Gear,
@@ -5,8 +7,6 @@ import {
   MusicNotes,
   Timer,
 } from '@phosphor-icons/react';
-import { HeaderContainer } from './styles';
-import { NavLink } from 'react-router-dom';
 
 export function Header() {
   return (
