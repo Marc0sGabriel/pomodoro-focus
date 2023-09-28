@@ -34,7 +34,7 @@ export const HomeContainer = styled.main`
 `;
 
 const BaseButton = styled.button`
-  width: 100%;
+  width: 60%;
   border: 0;
   padding: 1rem;
   border-radius: 8px;
@@ -56,6 +56,10 @@ const BaseButton = styled.button`
 
   &:not(:disabled):hover {
     filter: brightness(0.9);
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
   }
 `;
 
