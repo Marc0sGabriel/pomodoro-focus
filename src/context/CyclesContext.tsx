@@ -6,13 +6,13 @@ import {
   useState,
 } from 'react';
 import { Cycle, cyclesReducer } from '../reducers/cycles/reducer';
+import { differenceInSeconds } from 'date-fns';
+import { DefaultTheme } from 'styled-components';
 import {
   addNewCycleAction,
   interruptCurrentCycleAction,
   markCurrentCycleAsFinishedAction,
 } from '../reducers/cycles/action';
-import { differenceInSeconds } from 'date-fns';
-import { DefaultTheme } from 'styled-components';
 
 interface CreateCycleData {
   task: string;
