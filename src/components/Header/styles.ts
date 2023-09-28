@@ -4,6 +4,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 2rem 0;
 
   img {
     filter: hue-rotate(-50deg) saturate(45%) brightness(160%);
@@ -14,7 +15,11 @@ export const HeaderContainer = styled.header`
   nav {
     display: flex;
     gap: 0.7rem;
+    padding: 0 1rem;
+    border-radius: 8px;
     align-items: center;
+    background: rgba(32, 32, 36, 0.5);
+    backdrop-filter: blur(5px);
 
     a {
       width: 3rem;
